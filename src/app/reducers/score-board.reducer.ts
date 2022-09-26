@@ -23,5 +23,12 @@ export const scoreboardReducer = createReducer(
   on(ScoreboardPageActions.setScores, (state, { game }) => ({
     home: game.home,
     away: game.away,
+  })),
+  on(ScoreboardPageActions.loadScores, (state) => ({
+    ...state,
+  })),
+  on(ScoreboardPageActions.loadScoresSuccess, (state, { game }) => ({
+    home: game.home,
+    away: game.away,
   }))
 );
