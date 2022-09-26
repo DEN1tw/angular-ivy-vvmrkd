@@ -2,6 +2,8 @@ import { createReducer, on } from '@ngrx/store';
 import * as ScoreboardPageActions from '../actions/score-board.actions';
 import { IScoreBoardState } from '../interfaces/score-board.interface';
 
+export const scoreboardFeatureKey = 'game';
+
 export const INITIAL_STATE: IScoreBoardState = {
   home: 0,
   away: 0,
