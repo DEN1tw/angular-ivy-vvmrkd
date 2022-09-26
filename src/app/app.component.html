@@ -1,0 +1,9 @@
+<div>Current result: {{ scores$ | async | json }}</div>
+
+<button id="increment" (click)="increment()">Home scores</button>
+
+<button id="decrement" (click)="decrement()">Away scores</button>
+
+<button id="reset" (click)="reset()">Reset score</button>
+
+<button id="reset" (click)="setScore()">Set score to 6:3</button>
