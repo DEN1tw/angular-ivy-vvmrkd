@@ -9,7 +9,3 @@ export const setScores = createAction(
   props<{ game: IScoreBoardState }>()
 );
 export const loadScores = createAction('[Scoreboard Page] Load Scores');
-export const loadScoresSuccess = createAction(
-  '[Scoreboard Page] Load Scores Success',
-  props<{ game: IScoreBoardState }>()
-);
