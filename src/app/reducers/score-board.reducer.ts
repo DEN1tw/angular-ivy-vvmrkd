@@ -19,13 +19,15 @@ export const scoreboardReducer = createReducer(
     ...state,
     away: state.away + 1,
   })),
-  on(ScoreboardPageActions.resetScore, (state) => ({ home: 0, away: 0 }))
-  // on(ScoreboardPageActions.setScores, (state, { game }) => ({
-  //   home: game.home,
-  //   away: game.away,
-  // })),
-  // on(ScoreboardPageActions.loadScoresSuccess, (state, { game }) => ({
-  //   home: game.home,
-  //   away: game.away,
-  // }))
+  on(ScoreboardPageActions.resetScore, (state) => ({ home: 0, away: 0 })),
+  on(ScoreboardPageActions.setScores, (state, { game }) => ({
+    home: game.home,
+    away: game.away,
+  })),
+  on(ScoreboardPageActions.loadScoresSuccess, (state, { game }) => {
+    return {
+      home: game.home,
+      away: game.away,
+    };
+  })
 );

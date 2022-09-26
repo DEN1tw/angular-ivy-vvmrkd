@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import {
   awayScore,
   homeScore,
+  loadScores,
   resetScore,
   setScores,
 } from './actions/score-board.actions';
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.dispatch({ type: '[Scoreboard Page] Load Scores' });
+    this.store.dispatch(loadScores());
   }
 
   increment(): void {
